@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="10" maxHeight="301.0" maxWidth="402.0" minHeight="301.0" minWidth="402.0" prefHeight="301.0" prefWidth="402.0" vgap="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartvois.LoginController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+        <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="NEVER" />
+    </rowConstraints>
+
+    <Label text="Username:" GridPane.rowIndex="2" />
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Password:" GridPane.rowIndex="3" />
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Button fx:id="loginButton" onAction="#Login" text="Login" GridPane.rowIndex="4" />
+    <Button fx:id="signupButton" onAction="#signup" text="Signup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button fx:id="forgotPasswordButton" text="Forgot Password" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <Label alignment="CENTER" prefHeight="46.0" prefWidth="172.0" text="SmartVoices" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+</GridPane>

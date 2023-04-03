@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smartvois.DashController">
+    <Separator orientation="VERTICAL" prefHeight="200.0"/>
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" text="New"/>
+            <MenuItem mnemonicParsing="false" text="Open…"/>
+            <Menu mnemonicParsing="false" text="Open Recent"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Close"/>
+            <MenuItem mnemonicParsing="false" text="Save"/>
+            <MenuItem mnemonicParsing="false" text="Save As…"/>
+            <MenuItem mnemonicParsing="false" text="Revert"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Preferences…"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Quit"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" text="Undo"/>
+            <MenuItem mnemonicParsing="false" text="Redo"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Cut"/>
+            <MenuItem mnemonicParsing="false" text="Copy"/>
+            <MenuItem mnemonicParsing="false" text="Paste"/>
+            <MenuItem mnemonicParsing="false" text="Delete"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" text="Select All"/>
+            <MenuItem mnemonicParsing="false" text="Unselect All"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
+        </Menu>
+    </MenuBar>
+    <AnchorPane
+            prefHeight="361.0" prefWidth="788.0" VBox.vgrow="ALWAYS">
+        <Separator layoutX="494.0" orientation="VERTICAL" prefHeight="373.0" prefWidth="9.0"/>
+        <Separator layoutY="157.0" prefHeight="10.0" prefWidth="500.0"/>
+        <ImageView fitHeight="126.0" fitWidth="150.0" layoutX="528.0" layoutY="20.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@user.png"/>
+        </ImageView>
+        <ListView editable="true" layoutX="505.0" layoutY="173.0" opacity="0.16" prefHeight="97.0" prefWidth="186.0"/>
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="198.0" text="Group Audio"/>
+        <ListView layoutX="12.0" layoutY="41.0" prefHeight="97.0" prefWidth="200.0"/>
+        <ScrollBar layoutX="197.0" layoutY="40.0" orientation="VERTICAL"/>
+        <Label layoutX="281.0" layoutY="20.0" prefHeight="21.0" prefWidth="200.0" text="Your Audio"/>
+        <ListView layoutX="281.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0"/>
+        <ScrollBar layoutX="466.0" layoutY="40.0" orientation="VERTICAL"/>
+        <LineChart animated="false" layoutX="75.0" layoutY="195.0" legendSide="TOP" prefHeight="150.0"
+                   prefWidth="351.0">
+            <xAxis>
+                <CategoryAxis prefHeight="0.0" prefWidth="439.0" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT"/>
+            </yAxis>
+            <effect>
+                <Glow/>
+            </effect>
+        </LineChart>
+        <Label layoutX="205.0" layoutY="176.0" prefHeight="21.0" prefWidth="91.0" text="Your Activity"/>
+        <Button layoutX="557.0" layoutY="321.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="83.0"
+                text="Exit"/>
+        <Button fx:id="convert" onAction="#loadConvert" layoutX="557.0" layoutY="278.0" mnemonicParsing="false"
+                prefHeight="24.0" prefWidth="83.0" text="Convert"/>
+
+    </AnchorPane>
+</VBox>
